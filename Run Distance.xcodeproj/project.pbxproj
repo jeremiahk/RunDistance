@@ -18,6 +18,7 @@
 		272D32F32471F5FB007FEEA0 /* Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */; };
 		272D32F42471F5FB007FEEA0 /* Alerts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		272D32FC2471F61C007FEEA0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32FB2471F61C007FEEA0 /* Alerts.swift */; };
+		272D32FE2471F74C007FEEA0 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32FD2471F74C007FEEA0 /* Distance.swift */; };
 		2758B5CE246E31FF005ADC89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5CD246E31FF005ADC89 /* AppDelegate.swift */; };
 		2758B5D0246E31FF005ADC89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5CF246E31FF005ADC89 /* SceneDelegate.swift */; };
 		2758B5D2246E31FF005ADC89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5D1246E31FF005ADC89 /* ContentView.swift */; };
@@ -109,6 +110,7 @@
 		272D32ED2471F5FB007FEEA0 /* AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTests.swift; sourceTree = "<group>"; };
 		272D32EF2471F5FB007FEEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272D32FB2471F61C007FEEA0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		272D32FD2471F74C007FEEA0 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		2758B5CA246E31FF005ADC89 /* Run Distance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Distance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2758B5CD246E31FF005ADC89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2758B5CF246E31FF005ADC89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				272D32BD2471F5E0007FEEA0 /* Distance.h */,
 				272D32BE2471F5E0007FEEA0 /* Info.plist */,
+				272D32FD2471F74C007FEEA0 /* Distance.swift */,
 			);
 			path = Distance;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				TargetAttributes = {
 					272D32BA2471F5E0007FEEA0 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					272D32C22471F5E0007FEEA0 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -523,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272D32FE2471F74C007FEEA0 /* Distance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +628,7 @@
 		272D32D32471F5E0007FEEA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -641,6 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Distance;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -651,6 +658,7 @@
 		272D32D42471F5E0007FEEA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

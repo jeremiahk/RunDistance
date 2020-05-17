@@ -1,13 +1,15 @@
 import SwiftUI
 
-public struct Alert: View {
+public struct AlertView: View {
+    public init() {}
+    
     public var body: some View {
         Text("Distance Alerts Settings")
     }
 }
 
-struct Alert_Preview: PreviewProvider {
+struct AlertView_Preview: PreviewProvider {
     static var previews: some View {
-        Alert()
+        AlertView()
     }
 }
