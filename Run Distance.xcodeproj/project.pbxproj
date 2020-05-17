@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272D32C42471F5E0007FEEA0 /* Distance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32BB2471F5E0007FEEA0 /* Distance.framework */; };
+		272D32CB2471F5E0007FEEA0 /* DistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32CA2471F5E0007FEEA0 /* DistanceTests.swift */; };
+		272D32CD2471F5E0007FEEA0 /* Distance.h in Headers */ = {isa = PBXBuildFile; fileRef = 272D32BD2471F5E0007FEEA0 /* Distance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		272D32D02471F5E0007FEEA0 /* Distance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32BB2471F5E0007FEEA0 /* Distance.framework */; };
+		272D32D12471F5E0007FEEA0 /* Distance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32BB2471F5E0007FEEA0 /* Distance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		272D32E72471F5FB007FEEA0 /* Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */; };
+		272D32EE2471F5FB007FEEA0 /* AlertsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32ED2471F5FB007FEEA0 /* AlertsTests.swift */; };
+		272D32F02471F5FB007FEEA0 /* Alerts.h in Headers */ = {isa = PBXBuildFile; fileRef = 272D32E02471F5FB007FEEA0 /* Alerts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		272D32F32471F5FB007FEEA0 /* Alerts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */; };
+		272D32F42471F5FB007FEEA0 /* Alerts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		272D32FC2471F61C007FEEA0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D32FB2471F61C007FEEA0 /* Alerts.swift */; };
 		2758B5CE246E31FF005ADC89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5CD246E31FF005ADC89 /* AppDelegate.swift */; };
 		2758B5D0246E31FF005ADC89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5CF246E31FF005ADC89 /* SceneDelegate.swift */; };
 		2758B5D2246E31FF005ADC89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2758B5D1246E31FF005ADC89 /* ContentView.swift */; };
@@ -18,6 +29,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		272D32C52471F5E0007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 272D32BA2471F5E0007FEEA0;
+			remoteInfo = Distance;
+		};
+		272D32C72471F5E0007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2758B5C9246E31FF005ADC89;
+			remoteInfo = "Run Distance";
+		};
+		272D32CE2471F5E0007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 272D32BA2471F5E0007FEEA0;
+			remoteInfo = Distance;
+		};
+		272D32E82471F5FB007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 272D32DD2471F5FA007FEEA0;
+			remoteInfo = Alerts;
+		};
+		272D32EA2471F5FB007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2758B5C9246E31FF005ADC89;
+			remoteInfo = "Run Distance";
+		};
+		272D32F12471F5FB007FEEA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 272D32DD2471F5FA007FEEA0;
+			remoteInfo = Alerts;
+		};
 		2758B5E1246E3200005ADC89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
@@ -27,7 +80,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		272D32D22471F5E0007FEEA0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				272D32D12471F5E0007FEEA0 /* Distance.framework in Embed Frameworks */,
+				272D32F42471F5FB007FEEA0 /* Alerts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		272D32BB2471F5E0007FEEA0 /* Distance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Distance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		272D32BD2471F5E0007FEEA0 /* Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Distance.h; sourceTree = "<group>"; };
+		272D32BE2471F5E0007FEEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272D32C32471F5E0007FEEA0 /* DistanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		272D32CA2471F5E0007FEEA0 /* DistanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceTests.swift; sourceTree = "<group>"; };
+		272D32CC2471F5E0007FEEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272D32DE2471F5FB007FEEA0 /* Alerts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alerts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		272D32E02471F5FB007FEEA0 /* Alerts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
+		272D32E12471F5FB007FEEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272D32E62471F5FB007FEEA0 /* AlertsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		272D32ED2471F5FB007FEEA0 /* AlertsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTests.swift; sourceTree = "<group>"; };
+		272D32EF2471F5FB007FEEA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272D32FB2471F61C007FEEA0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		2758B5CA246E31FF005ADC89 /* Run Distance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Distance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2758B5CD246E31FF005ADC89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2758B5CF246E31FF005ADC89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +125,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		272D32B82471F5E0007FEEA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32C02471F5E0007FEEA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32C42471F5E0007FEEA0 /* Distance.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32DB2471F5FA007FEEA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32E32471F5FB007FEEA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32E72471F5FB007FEEA0 /* Alerts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2758B5C7246E31FF005ADC89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272D32F32471F5FB007FEEA0 /* Alerts.framework in Frameworks */,
 				2758B5F2246E338B005ADC89 /* HealthKit.framework in Frameworks */,
+				272D32D02471F5E0007FEEA0 /* Distance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,11 +175,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272D32BC2471F5E0007FEEA0 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				272D32BD2471F5E0007FEEA0 /* Distance.h */,
+				272D32BE2471F5E0007FEEA0 /* Info.plist */,
+			);
+			path = Distance;
+			sourceTree = "<group>";
+		};
+		272D32C92471F5E0007FEEA0 /* DistanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				272D32CA2471F5E0007FEEA0 /* DistanceTests.swift */,
+				272D32CC2471F5E0007FEEA0 /* Info.plist */,
+			);
+			path = DistanceTests;
+			sourceTree = "<group>";
+		};
+		272D32DF2471F5FB007FEEA0 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				272D32E02471F5FB007FEEA0 /* Alerts.h */,
+				272D32E12471F5FB007FEEA0 /* Info.plist */,
+				272D32FB2471F61C007FEEA0 /* Alerts.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		272D32EC2471F5FB007FEEA0 /* AlertsTests */ = {
+			isa = PBXGroup;
+			children = (
+				272D32ED2471F5FB007FEEA0 /* AlertsTests.swift */,
+				272D32EF2471F5FB007FEEA0 /* Info.plist */,
+			);
+			path = AlertsTests;
+			sourceTree = "<group>";
+		};
 		2758B5C1246E31FF005ADC89 = {
 			isa = PBXGroup;
 			children = (
 				2758B5CC246E31FF005ADC89 /* Run Distance */,
 				2758B5E3246E3200005ADC89 /* Run DistanceTests */,
+				272D32BC2471F5E0007FEEA0 /* Distance */,
+				272D32C92471F5E0007FEEA0 /* DistanceTests */,
+				272D32DF2471F5FB007FEEA0 /* Alerts */,
+				272D32EC2471F5FB007FEEA0 /* AlertsTests */,
 				2758B5CB246E31FF005ADC89 /* Products */,
 				2758B5F0246E338B005ADC89 /* Frameworks */,
 			);
@@ -77,6 +231,10 @@
 			children = (
 				2758B5CA246E31FF005ADC89 /* Run Distance.app */,
 				2758B5E0246E3200005ADC89 /* Run DistanceTests.xctest */,
+				272D32BB2471F5E0007FEEA0 /* Distance.framework */,
+				272D32C32471F5E0007FEEA0 /* DistanceTests.xctest */,
+				272D32DE2471F5FB007FEEA0 /* Alerts.framework */,
+				272D32E62471F5FB007FEEA0 /* AlertsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +281,100 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		272D32B62471F5E0007FEEA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32CD2471F5E0007FEEA0 /* Distance.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32D92471F5FA007FEEA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32F02471F5FB007FEEA0 /* Alerts.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		272D32BA2471F5E0007FEEA0 /* Distance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272D32D72471F5E0007FEEA0 /* Build configuration list for PBXNativeTarget "Distance" */;
+			buildPhases = (
+				272D32B62471F5E0007FEEA0 /* Headers */,
+				272D32B72471F5E0007FEEA0 /* Sources */,
+				272D32B82471F5E0007FEEA0 /* Frameworks */,
+				272D32B92471F5E0007FEEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Distance;
+			productName = Distance;
+			productReference = 272D32BB2471F5E0007FEEA0 /* Distance.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		272D32C22471F5E0007FEEA0 /* DistanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272D32D82471F5E0007FEEA0 /* Build configuration list for PBXNativeTarget "DistanceTests" */;
+			buildPhases = (
+				272D32BF2471F5E0007FEEA0 /* Sources */,
+				272D32C02471F5E0007FEEA0 /* Frameworks */,
+				272D32C12471F5E0007FEEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				272D32C62471F5E0007FEEA0 /* PBXTargetDependency */,
+				272D32C82471F5E0007FEEA0 /* PBXTargetDependency */,
+			);
+			name = DistanceTests;
+			productName = DistanceTests;
+			productReference = 272D32C32471F5E0007FEEA0 /* DistanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		272D32DD2471F5FA007FEEA0 /* Alerts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272D32F52471F5FB007FEEA0 /* Build configuration list for PBXNativeTarget "Alerts" */;
+			buildPhases = (
+				272D32D92471F5FA007FEEA0 /* Headers */,
+				272D32DA2471F5FA007FEEA0 /* Sources */,
+				272D32DB2471F5FA007FEEA0 /* Frameworks */,
+				272D32DC2471F5FA007FEEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alerts;
+			productName = Alerts;
+			productReference = 272D32DE2471F5FB007FEEA0 /* Alerts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		272D32E52471F5FB007FEEA0 /* AlertsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 272D32F82471F5FB007FEEA0 /* Build configuration list for PBXNativeTarget "AlertsTests" */;
+			buildPhases = (
+				272D32E22471F5FB007FEEA0 /* Sources */,
+				272D32E32471F5FB007FEEA0 /* Frameworks */,
+				272D32E42471F5FB007FEEA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				272D32E92471F5FB007FEEA0 /* PBXTargetDependency */,
+				272D32EB2471F5FB007FEEA0 /* PBXTargetDependency */,
+			);
+			name = AlertsTests;
+			productName = AlertsTests;
+			productReference = 272D32E62471F5FB007FEEA0 /* AlertsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2758B5C9246E31FF005ADC89 /* Run Distance */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2758B5E9246E3200005ADC89 /* Build configuration list for PBXNativeTarget "Run Distance" */;
@@ -131,10 +382,13 @@
 				2758B5C6246E31FF005ADC89 /* Sources */,
 				2758B5C7246E31FF005ADC89 /* Frameworks */,
 				2758B5C8246E31FF005ADC89 /* Resources */,
+				272D32D22471F5E0007FEEA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				272D32CF2471F5E0007FEEA0 /* PBXTargetDependency */,
+				272D32F22471F5FB007FEEA0 /* PBXTargetDependency */,
 			);
 			name = "Run Distance";
 			productName = "Run Distance";
@@ -169,6 +423,21 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Jeremiah Kistler";
 				TargetAttributes = {
+					272D32BA2471F5E0007FEEA0 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					272D32C22471F5E0007FEEA0 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 2758B5C9246E31FF005ADC89;
+					};
+					272D32DD2471F5FA007FEEA0 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
+					272D32E52471F5FB007FEEA0 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 2758B5C9246E31FF005ADC89;
+					};
 					2758B5C9246E31FF005ADC89 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -193,11 +462,43 @@
 			targets = (
 				2758B5C9246E31FF005ADC89 /* Run Distance */,
 				2758B5DF246E3200005ADC89 /* Run DistanceTests */,
+				272D32BA2471F5E0007FEEA0 /* Distance */,
+				272D32C22471F5E0007FEEA0 /* DistanceTests */,
+				272D32DD2471F5FA007FEEA0 /* Alerts */,
+				272D32E52471F5FB007FEEA0 /* AlertsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		272D32B92471F5E0007FEEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32C12471F5E0007FEEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32DC2471F5FA007FEEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32E42471F5FB007FEEA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2758B5C8246E31FF005ADC89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +519,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		272D32B72471F5E0007FEEA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32BF2471F5E0007FEEA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32CB2471F5E0007FEEA0 /* DistanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32DA2471F5FA007FEEA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32FC2471F61C007FEEA0 /* Alerts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		272D32E22471F5FB007FEEA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				272D32EE2471F5FB007FEEA0 /* AlertsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2758B5C6246E31FF005ADC89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +571,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		272D32C62471F5E0007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 272D32BA2471F5E0007FEEA0 /* Distance */;
+			targetProxy = 272D32C52471F5E0007FEEA0 /* PBXContainerItemProxy */;
+		};
+		272D32C82471F5E0007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2758B5C9246E31FF005ADC89 /* Run Distance */;
+			targetProxy = 272D32C72471F5E0007FEEA0 /* PBXContainerItemProxy */;
+		};
+		272D32CF2471F5E0007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 272D32BA2471F5E0007FEEA0 /* Distance */;
+			targetProxy = 272D32CE2471F5E0007FEEA0 /* PBXContainerItemProxy */;
+		};
+		272D32E92471F5FB007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 272D32DD2471F5FA007FEEA0 /* Alerts */;
+			targetProxy = 272D32E82471F5FB007FEEA0 /* PBXContainerItemProxy */;
+		};
+		272D32EB2471F5FB007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2758B5C9246E31FF005ADC89 /* Run Distance */;
+			targetProxy = 272D32EA2471F5FB007FEEA0 /* PBXContainerItemProxy */;
+		};
+		272D32F22471F5FB007FEEA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 272D32DD2471F5FA007FEEA0 /* Alerts */;
+			targetProxy = 272D32F12471F5FB007FEEA0 /* PBXContainerItemProxy */;
+		};
 		2758B5E2246E3200005ADC89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2758B5C9246E31FF005ADC89 /* Run Distance */;
@@ -258,6 +620,201 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		272D32D32471F5E0007FEEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Distance/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Distance;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		272D32D42471F5E0007FEEA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Distance/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Distance;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		272D32D52471F5E0007FEEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				INFOPLIST_FILE = DistanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.DistanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Distance.app/Run Distance";
+			};
+			name = Debug;
+		};
+		272D32D62471F5E0007FEEA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				INFOPLIST_FILE = DistanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.DistanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Distance.app/Run Distance";
+			};
+			name = Release;
+		};
+		272D32F62471F5FB007FEEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Alerts/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Alerts;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		272D32F72471F5FB007FEEA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Alerts/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Alerts;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		272D32F92471F5FB007FEEA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				INFOPLIST_FILE = AlertsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.AlertsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Distance.app/Run Distance";
+			};
+			name = Debug;
+		};
+		272D32FA2471F5FB007FEEA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				INFOPLIST_FILE = AlertsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.AlertsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Run Distance.app/Run Distance";
+			};
+			name = Release;
+		};
 		2758B5E7246E3200005ADC89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -375,6 +932,7 @@
 		2758B5EA246E3200005ADC89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Run Distance/Run Distance.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -398,6 +956,7 @@
 		2758B5EB246E3200005ADC89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Run Distance/Run Distance.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -465,6 +1024,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		272D32D72471F5E0007FEEA0 /* Build configuration list for PBXNativeTarget "Distance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D32D32471F5E0007FEEA0 /* Debug */,
+				272D32D42471F5E0007FEEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		272D32D82471F5E0007FEEA0 /* Build configuration list for PBXNativeTarget "DistanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D32D52471F5E0007FEEA0 /* Debug */,
+				272D32D62471F5E0007FEEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		272D32F52471F5FB007FEEA0 /* Build configuration list for PBXNativeTarget "Alerts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D32F62471F5FB007FEEA0 /* Debug */,
+				272D32F72471F5FB007FEEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		272D32F82471F5FB007FEEA0 /* Build configuration list for PBXNativeTarget "AlertsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272D32F92471F5FB007FEEA0 /* Debug */,
+				272D32FA2471F5FB007FEEA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2758B5C5246E31FF005ADC89 /* Build configuration list for PBXProject "Run Distance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
