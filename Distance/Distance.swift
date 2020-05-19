@@ -1,7 +1,7 @@
 import SwiftUI
 import Architecture
 
-public enum DistanceAction {
+public enum DistanceAction: Equatable {
     case startingDateTapped
     case endingDateTapped
     case startingDateSelected(Date)
@@ -10,7 +10,7 @@ public enum DistanceAction {
     case closeAlert
 }
 
-public struct DistanceState {
+public struct DistanceState: Equatable {
     var startingDate: Date
     var endingDate: Date
     var isShowingStartingDate: Bool
