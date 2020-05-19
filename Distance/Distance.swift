@@ -5,7 +5,9 @@ public struct DistanceView: View {
     @State private var endingDate: Date = Date()
     @State private var isShowingStartingDate = false
     @State private var isShowingEndingDate = false
-    @State private var distanceText: String? = nil
+    @State private var distanceText: String?
+    @State private var displayError: Bool = false
+    @State private var error: String?
 
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -44,10 +46,24 @@ public struct DistanceView: View {
                         .labelsHidden()
                 }
 
-                Button("Test") {
-//                    getDistance()
-                    withAnimation {
-                        self.distanceText = "130 Miles"
+                Button("Get distance ran") {
+                    calculateRunDistance(start: self.startingDate, end: self.endingDate) { result in
+                        withAnimation {
+                            switch result {
+                            case let .success(distance):
+                                self.distanceText = "\(distance) Miles"
+                            case let .failure(error):
+                                switch error {
+                                case .unknown:
+                                    self.error = "An unknown error occured."
+                                case .empty:
+                                    self.error = "Could not find runs in the given date range."
+                                }
+
+                                self.distanceText = nil
+                                self.displayError = true
+                            }
+                        }
                     }
                 }
 
@@ -57,6 +73,9 @@ public struct DistanceView: View {
                 }
             }
             .navigationBarTitle("Distance Ran")
+            .alert(isPresented: $displayError) {
+                Alert(title: Text(self.error!))
+            }
         }
     }
 }
