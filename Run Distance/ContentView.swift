@@ -7,10 +7,12 @@ struct ContentView: View {
         TabView {
             DistanceView()
                 .tabItem {
+                    Image(systemName: "square")
                     Text("Distance")
                 }
             AlertView()
                 .tabItem {
+                    Image(systemName: "circle")
                     Text("Alerts")
                 }
         }
