@@ -44,9 +44,13 @@ public func distanceReducer(state: inout DistanceState, action: DistanceAction) 
         state.isShowingEndingDate = !state.isShowingEndingDate
         state.isShowingStartingDate = false
     case let .startingDateSelected(newDate):
-        state.startingDate = newDate
+        if state.endingDate.compare(newDate) == .orderedDescending {
+            state.startingDate = newDate
+        }
     case let .endingDateSelected(newDate):
-        state.endingDate = newDate
+        if state.startingDate.compare(newDate) == .orderedAscending {
+            state.endingDate = newDate
+        }
     case let .distanceResponse(response):
         switch response {
         case let .success(distance):
