@@ -1,13 +1,71 @@
 import SwiftUI
+import Architecture
+
+public enum DistanceAction {
+    case startingDateTapped
+    case endingDateTapped
+    case startingDateSelected(Date)
+    case endingDateSelected(Date)
+    case distanceResponse(Result<Double, DistanceError>)
+    case closeAlert
+}
+
+public struct DistanceState {
+    var startingDate: Date
+    var endingDate: Date
+    var isShowingStartingDate: Bool
+    var isShowingEndingDate: Bool
+    var errorAlert: ErrorAlert?
+    var distance: String?
+
+    public init(
+        startingDate: Date = Date(),
+        endingDate: Date = Date(),
+        isShowingStartingDate: Bool = false,
+        isShowingEndingDate: Bool = false,
+        errorAlert: ErrorAlert? = nil,
+        distance: String? = nil
+    ) {
+        self.startingDate = startingDate
+        self.endingDate = endingDate
+        self.isShowingStartingDate = isShowingStartingDate
+        self.isShowingEndingDate = isShowingEndingDate
+        self.errorAlert = errorAlert
+        self.distance = distance
+    }
+}
+
+public func distanceReducer(state: inout DistanceState, action: DistanceAction) {
+    switch action {
+    case .startingDateTapped:
+        state.isShowingStartingDate = !state.isShowingStartingDate
+        state.isShowingEndingDate = false
+    case .endingDateTapped:
+        state.isShowingEndingDate = !state.isShowingEndingDate
+        state.isShowingStartingDate = false
+    case let .startingDateSelected(newDate):
+        state.startingDate = newDate
+    case let .endingDateSelected(newDate):
+        state.endingDate = newDate
+    case let .distanceResponse(response):
+        switch response {
+        case let .success(distance):
+            state.distance = String(format: "%10.1f", distance)
+        case let .failure(error):
+            switch error {
+            case .unknown:
+                state.errorAlert = ErrorAlert(message: "Unknown error occured")
+            case .empty:
+                state.errorAlert = ErrorAlert(message: "No runs in the given date found")
+            }
+        }
+    case .closeAlert:
+        state.errorAlert = nil
+    }
+}
 
 public struct DistanceView: View {
-    @State private var startingDate: Date = Date()
-    @State private var endingDate: Date = Date()
-    @State private var isShowingStartingDate = false
-    @State private var isShowingEndingDate = false
-    @State private var distanceText: String?
-    @State private var displayError: Bool = false
-    @State private var error: String?
+    @ObservedObject var store: Store<DistanceState, DistanceAction>
 
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -15,73 +73,75 @@ public struct DistanceView: View {
         return formatter
     }()
 
-    public init() {}
+    public init(store: Store<DistanceState, DistanceAction>) {
+        self.store = store
+    }
 
     public var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Button("Starting Date: \(dateFormatter.string(from: startingDate))") {
+                Button("Starting Date: \(dateFormatter.string(from: store.value.startingDate))") {
                     withAnimation {
-                        if (self.isShowingEndingDate) { self.isShowingEndingDate = false}
-                        self.isShowingStartingDate.toggle()
+                        self.store.send(.startingDateTapped)
                     }
                 }
 
-                if isShowingStartingDate {
-                    DatePicker("", selection: $startingDate, displayedComponents: .date)
+                if store.value.isShowingStartingDate {
+                    DatePicker(
+                        "",
+                        selection: self.store.send({ .startingDateSelected($0) }, bind: \.startingDate),
+                        displayedComponents: .date
+                    )
                         .transition(.asymmetric(insertion: .scale, removal: .opacity))
                         .labelsHidden()
                 }
 
-                Button("Ending Date: \(dateFormatter.string(from: endingDate))") {
+                Button("Ending Date: \(dateFormatter.string(from: self.store.value.endingDate))") {
                     withAnimation {
-                        if (self.isShowingStartingDate) { self.isShowingStartingDate = false}
-                        self.isShowingEndingDate.toggle()
+                        self.store.send(.endingDateTapped)
                     }
                 }
 
-                if isShowingEndingDate {
-                    DatePicker("", selection: $endingDate, displayedComponents: .date)
+                if store.value.isShowingEndingDate {
+                    DatePicker(
+                        "",
+                        selection: self.store.send({ .endingDateSelected($0) }, bind: \.endingDate),
+                        displayedComponents: .date
+                    )
                         .transition(.asymmetric(insertion: .scale, removal: .opacity))
                         .labelsHidden()
                 }
 
                 Button("Get distance ran") {
-                    calculateRunDistance(start: self.startingDate, end: self.endingDate) { result in
+                    calculateRunDistance(start: self.store.value.startingDate, end: self.store.value.endingDate) { result in
                         withAnimation {
-                            switch result {
-                            case let .success(distance):
-                                self.distanceText = "\(distance) Miles"
-                            case let .failure(error):
-                                switch error {
-                                case .unknown:
-                                    self.error = "An unknown error occured."
-                                case .empty:
-                                    self.error = "Could not find runs in the given date range."
-                                }
-
-                                self.distanceText = nil
-                                self.displayError = true
-                            }
+                            self.store.send(.distanceResponse(result))
                         }
                     }
                 }
 
-                if distanceText != nil {
-                    Text(distanceText!)
+                store.value.distance.map { distance in
+                    Text(distance + " Miles")
                         .transition(.asymmetric(insertion: .scale, removal: .opacity))
                 }
             }
             .navigationBarTitle("Distance Ran")
-            .alert(isPresented: $displayError) {
-                Alert(title: Text(self.error!))
+            .alert(
+                item: self.store.send({ _ in .closeAlert }, bind: \.errorAlert)
+            ) { alert in
+                Alert(title: Text(alert.message))
             }
         }
     }
 }
 
+public struct ErrorAlert: Identifiable, Equatable {
+    public var id: String { self.message }
+    let message: String
+}
+
 struct DistanceView_Preview: PreviewProvider {
     static var previews: some View {
-        DistanceView()
+        DistanceView(store: Store(initialValue: DistanceState(), reducer: distanceReducer))
     }
 }

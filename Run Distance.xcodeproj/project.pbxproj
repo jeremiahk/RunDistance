@@ -38,6 +38,10 @@
 		27D50ACA24746ED200DB7B3A /* Shoes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D50AB524746ED200DB7B3A /* Shoes.framework */; };
 		27D50ACB24746ED200DB7B3A /* Shoes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27D50AB524746ED200DB7B3A /* Shoes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27D50AD324746EE200DB7B3A /* Shoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D50AD224746EE200DB7B3A /* Shoes.swift */; };
+		27D50ADD24746FE300DB7B3A /* Architecture.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D50ADB24746FE300DB7B3A /* Architecture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D50AE024746FE300DB7B3A /* Architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D50AD924746FE300DB7B3A /* Architecture.framework */; };
+		27D50AE124746FE300DB7B3A /* Architecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27D50AD924746FE300DB7B3A /* Architecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27D50AE624746FF400DB7B3A /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D50AE524746FF400DB7B3A /* Architecture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,13 @@
 			remoteGlobalIDString = 27D50AB424746ED200DB7B3A;
 			remoteInfo = Shoes;
 		};
+		27D50ADE24746FE300DB7B3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2758B5C2246E31FF005ADC89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D50AD824746FE300DB7B3A;
+			remoteInfo = Architecture;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -127,6 +138,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				27D50AE124746FE300DB7B3A /* Architecture.framework in Embed Frameworks */,
 				272D32D12471F5E0007FEEA0 /* Distance.framework in Embed Frameworks */,
 				27D50ACB24746ED200DB7B3A /* Shoes.framework in Embed Frameworks */,
 				27D50AAA24746C8A00DB7B3A /* FunctionalHelpers.framework in Embed Frameworks */,
@@ -177,6 +189,10 @@
 		27D50AC424746ED200DB7B3A /* ShoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesTests.swift; sourceTree = "<group>"; };
 		27D50AC624746ED200DB7B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27D50AD224746EE200DB7B3A /* Shoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoes.swift; sourceTree = "<group>"; };
+		27D50AD924746FE300DB7B3A /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D50ADB24746FE300DB7B3A /* Architecture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Architecture.h; sourceTree = "<group>"; };
+		27D50ADC24746FE300DB7B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D50AE524746FF400DB7B3A /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +233,7 @@
 				272D32F32471F5FB007FEEA0 /* Alerts.framework in Frameworks */,
 				27D50AA924746C8A00DB7B3A /* FunctionalHelpers.framework in Frameworks */,
 				2758B5F2246E338B005ADC89 /* HealthKit.framework in Frameworks */,
+				27D50AE024746FE300DB7B3A /* Architecture.framework in Frameworks */,
 				272D32D02471F5E0007FEEA0 /* Distance.framework in Frameworks */,
 				27D50ACA24746ED200DB7B3A /* Shoes.framework in Frameworks */,
 			);
@@ -248,6 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D50ABE24746ED200DB7B3A /* Shoes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D50AD624746FE300DB7B3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +329,7 @@
 				27D50AA324746C8A00DB7B3A /* FunctionalHelpers */,
 				27D50AB624746ED200DB7B3A /* Shoes */,
 				27D50AC324746ED200DB7B3A /* ShoesTests */,
+				27D50ADA24746FE300DB7B3A /* Architecture */,
 				2758B5CB246E31FF005ADC89 /* Products */,
 				2758B5F0246E338B005ADC89 /* Frameworks */,
 			);
@@ -322,6 +347,7 @@
 				27D50AA224746C8A00DB7B3A /* FunctionalHelpers.framework */,
 				27D50AB524746ED200DB7B3A /* Shoes.framework */,
 				27D50ABD24746ED200DB7B3A /* ShoesTests.xctest */,
+				27D50AD924746FE300DB7B3A /* Architecture.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -395,6 +421,16 @@
 			path = ShoesTests;
 			sourceTree = "<group>";
 		};
+		27D50ADA24746FE300DB7B3A /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				27D50ADB24746FE300DB7B3A /* Architecture.h */,
+				27D50ADC24746FE300DB7B3A /* Info.plist */,
+				27D50AE524746FF400DB7B3A /* Architecture.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -427,6 +463,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D50AC724746ED200DB7B3A /* Shoes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D50AD424746FE300DB7B3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D50ADD24746FE300DB7B3A /* Architecture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +567,7 @@
 				272D32F22471F5FB007FEEA0 /* PBXTargetDependency */,
 				27D50AA824746C8A00DB7B3A /* PBXTargetDependency */,
 				27D50AC924746ED200DB7B3A /* PBXTargetDependency */,
+				27D50ADF24746FE300DB7B3A /* PBXTargetDependency */,
 			);
 			name = "Run Distance";
 			productName = "Run Distance";
@@ -602,6 +647,24 @@
 			productReference = 27D50ABD24746ED200DB7B3A /* ShoesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		27D50AD824746FE300DB7B3A /* Architecture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D50AE224746FE300DB7B3A /* Build configuration list for PBXNativeTarget "Architecture" */;
+			buildPhases = (
+				27D50AD424746FE300DB7B3A /* Headers */,
+				27D50AD524746FE300DB7B3A /* Sources */,
+				27D50AD624746FE300DB7B3A /* Frameworks */,
+				27D50AD724746FE300DB7B3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Architecture;
+			productName = Architecture;
+			productReference = 27D50AD924746FE300DB7B3A /* Architecture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -647,6 +710,10 @@
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = 2758B5C9246E31FF005ADC89;
 					};
+					27D50AD824746FE300DB7B3A = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
 				};
 			};
 			buildConfigurationList = 2758B5C5246E31FF005ADC89 /* Build configuration list for PBXProject "Run Distance" */;
@@ -671,6 +738,7 @@
 				27D50AA124746C8A00DB7B3A /* FunctionalHelpers */,
 				27D50AB424746ED200DB7B3A /* Shoes */,
 				27D50ABC24746ED200DB7B3A /* ShoesTests */,
+				27D50AD824746FE300DB7B3A /* Architecture */,
 			);
 		};
 /* End PBXProject section */
@@ -736,6 +804,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		27D50ABB24746ED200DB7B3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D50AD724746FE300DB7B3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -820,6 +895,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27D50AD524746FE300DB7B3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D50AE624746FF400DB7B3A /* Architecture.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -877,6 +960,11 @@
 			isa = PBXTargetDependency;
 			target = 27D50AB424746ED200DB7B3A /* Shoes */;
 			targetProxy = 27D50AC824746ED200DB7B3A /* PBXContainerItemProxy */;
+		};
+		27D50ADF24746FE300DB7B3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D50AD824746FE300DB7B3A /* Architecture */;
+			targetProxy = 27D50ADE24746FE300DB7B3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1454,6 +1542,65 @@
 			};
 			name = Release;
 		};
+		27D50AE324746FE300DB7B3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Architecture/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Architecture;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27D50AE424746FE300DB7B3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = HUGP8WGL9J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Architecture/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremiah.Architecture;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1543,6 +1690,15 @@
 			buildConfigurations = (
 				27D50AD024746ED200DB7B3A /* Debug */,
 				27D50AD124746ED200DB7B3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D50AE224746FE300DB7B3A /* Build configuration list for PBXNativeTarget "Architecture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D50AE324746FE300DB7B3A /* Debug */,
+				27D50AE424746FE300DB7B3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

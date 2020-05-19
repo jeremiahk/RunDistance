@@ -1,4 +1,5 @@
 import SwiftUI
+import Architecture
 import Alerts
 import Distance
 import Shoes
@@ -6,7 +7,7 @@ import Shoes
 struct ContentView: View {
     var body: some View {
         TabView {
-            DistanceView()
+            DistanceView(store: Store(initialValue: DistanceState(), reducer: distanceReducer))
                 .tabItem {
                     Image(systemName: "square")
                     Text("Distance")

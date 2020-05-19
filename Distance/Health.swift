@@ -1,7 +1,7 @@
 import HealthKit
 import FunctionalHelpers
 
-enum DistanceError: Error {
+public enum DistanceError: Error {
     case unknown, empty
 }
 
