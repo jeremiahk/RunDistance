@@ -35,6 +35,26 @@ public struct DistanceState {
     }
 }
 
+public struct ErrorAlert: Identifiable, Equatable {
+    public var id: String { self.message }
+    let message: String
+}
+
+struct DistanceEnvironment {
+    var getRunDistance: (Date, Date, @escaping (Result<Double, DistanceError>) -> Void) -> ()
+}
+
+extension DistanceEnvironment {
+    static let live = DistanceEnvironment(getRunDistance: calculateRunDistance)
+    static let mock = DistanceEnvironment(getRunDistance: { _, _, closure in closure(.success(10.25)) })
+}
+
+#if DEBUG
+var Current = DistanceEnvironment.mock
+#else
+var Current = DistanceEnvironment.live
+#endif
+
 public func distanceReducer(state: inout DistanceState, action: DistanceAction) {
     switch action {
     case .startingDateTapped:
@@ -117,7 +137,7 @@ public struct DistanceView: View {
                 }
 
                 Button("Get distance ran") {
-                    calculateRunDistance(start: self.store.value.startingDate, end: self.store.value.endingDate) { result in
+                    Current.getRunDistance(self.store.value.startingDate, self.store.value.endingDate) { result in
                         withAnimation {
                             self.store.send(.distanceResponse(result))
                         }
@@ -137,11 +157,6 @@ public struct DistanceView: View {
             }
         }
     }
-}
-
-public struct ErrorAlert: Identifiable, Equatable {
-    public var id: String { self.message }
-    let message: String
 }
 
 struct DistanceView_Preview: PreviewProvider {
