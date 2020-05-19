@@ -1,8 +1,9 @@
 import XCTest
 @testable import Distance
 
+// These tests are not meant to be completly test the Distance reducer. Just enough to give you an idea.
 class DistanceTests: XCTestCase {
-    // Test can be written in a very common format. Or we can use a helper to make the tests much nicer to read.
+    // Test can be written in a common format. Or we can use a helper to make the tests much nicer to read.
     func testStartDateTapped() {
         let start = Date()
         let end = Date()
